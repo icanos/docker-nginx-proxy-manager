@@ -122,7 +122,7 @@ cp -rv /app/frontend/dist $ROOTFS/opt/nginx-proxy-manager/frontend
 cp -rv /app/global $ROOTFS/opt/nginx-proxy-manager/global
 
 mkdir $ROOTFS/opt/nginx-proxy-manager/bin
-#cp -rv /tmp/nginx-proxy-manager/docker/rootfs/bin/handle-ipv6-setting $ROOTFS/opt/nginx-proxy-manager/bin/
+cp -rv /tmp/nginx-proxy-manager/docker/rootfs/bin/handle-ipv6-setting $ROOTFS/opt/nginx-proxy-manager/bin/
 cp -rv /tmp/nginx-proxy-manager/docker/rootfs/etc/nginx $ROOTFS/etc/
 cp -rv /tmp/nginx-proxy-manager/docker/rootfs/var/www $ROOTFS/var/
 cp -rv /tmp/nginx-proxy-manager/docker/rootfs/etc/letsencrypt.ini $ROOTFS/etc/
