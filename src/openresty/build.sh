@@ -192,5 +192,4 @@ rm -r \
     /tmp/openresty-install/var/lib/nginx/bin/md2pod.pl \
     /tmp/openresty-install/var/lib/nginx/pod \
     /tmp/openresty-install/var/lib/nginx/resty.index \
-    /tmp/openresty-install/var/lib/nginx/site \
     /tmp/openresty-install/var/run \
