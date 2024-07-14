@@ -73,8 +73,8 @@ curl -# -L -f ${NGINX_PROXY_MANAGER_URL} | tar xz --strip 1 -C /tmp/nginx-proxy-
 sed -i "s/\"version\": \"0.0.0\",/\"version\": \"${NGINX_PROXY_MANAGER_VERSION}\",/" /tmp/nginx-proxy-manager/frontend/package.json
 sed -i "s/\"version\": \"0.0.0\",/\"version\": \"${NGINX_PROXY_MANAGER_VERSION}\",/" /tmp/nginx-proxy-manager/backend/package.json
 
-log "Patching Nginx Proxy Manager backend..."
-patch -p1 -d /tmp/nginx-proxy-manager < "$SCRIPT_DIR"/pip-install.patch
+#log "Patching Nginx Proxy Manager backend..."
+#patch -p1 -d /tmp/nginx-proxy-manager < "$SCRIPT_DIR"/pip-install.patch
 
 cp -r /tmp/nginx-proxy-manager /app
 
@@ -122,7 +122,7 @@ cp -rv /app/frontend/dist $ROOTFS/opt/nginx-proxy-manager/frontend
 cp -rv /app/global $ROOTFS/opt/nginx-proxy-manager/global
 
 mkdir $ROOTFS/opt/nginx-proxy-manager/bin
-cp -rv /tmp/nginx-proxy-manager/docker/rootfs/bin/handle-ipv6-setting $ROOTFS/opt/nginx-proxy-manager/bin/
+#cp -rv /tmp/nginx-proxy-manager/docker/rootfs/bin/handle-ipv6-setting $ROOTFS/opt/nginx-proxy-manager/bin/
 cp -rv /tmp/nginx-proxy-manager/docker/rootfs/etc/nginx $ROOTFS/etc/
 cp -rv /tmp/nginx-proxy-manager/docker/rootfs/var/www $ROOTFS/var/
 cp -rv /tmp/nginx-proxy-manager/docker/rootfs/etc/letsencrypt.ini $ROOTFS/etc/
